@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+
+  <!-- Import Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <style>
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Task List</span>
+            <div class="row">
+              <form id="taskForm" action="#">
+                <div class="input-field col s12">
+                  <input id="task" type="text" name="q">
+                  <label for="task">New Task</label>
+                </div>
+              </form>
+            </div> <!-- END OF .row -->
+
+            <div class="card-action">
+              <h5>Tasks</h5>
+              <div class="input-field col s12">
+                <input id="taskSearch" type="text">
+                <label for="taskSearch">Filter Task</label>
+              </div>
+              <ul class="collection" id="taskList">
+                
+              </ul>
+              <a href="#" id="clearAllTasks" class="btn black delete-item">Clear All Tasks</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty Error Modal -->
+  <div id="emptyModal" class="modal">
+    <div class="modal-content">
+      <h4>Error!</h4>
+      <p>Insert task value please!</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn">Ok</a>
+    </div>
+  </div>
+
+  <!-- Remove confirm modal-->
+  <div id="removeModal" class="modal">
+    <div class="modal-content">
+      <h4>Remove?</h4>
+      <p>Are you sure you wanna remove me?</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" id="removeTask" class="modal-close waves-effect waves-green btn">Yes</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn">No</a>
+    </div>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="main1.js"></script>
+</body>
+</html>
