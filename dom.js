@@ -1,6 +1,6 @@
-let val;
+// let val;
 
-val=document;
+// val=document;
 
 // val = document.all;
 // val = document.all[9];
@@ -12,21 +12,21 @@ val=document;
 // val = document.domain;  //this will only return a value if we are running on http or https protocol;
 
 // val = document.URL;
-console.log(val);
+// console.log(val);
 // val = document.characterSet;
 // val = document.contentType;
 
 
 // val  = document.forms;
-// val = document.forms[1];
-// val = document.forms[1].id;
-// val = document.forms[1].method;
-// val = document.forms[1].action;
+// val = document.forms[0];
+// val = document.forms[0].id;
+// val = document.forms[0].method;
+// val = document.forms[0].action;
 
 // val = document.links;
 // val = document.links[5];
 // val = document.links[5].href;
-// val =document.linksp[5].className;
+// val =document.links[5].className;
 // val = document.links[5].classList;
 // val = document.links[5].classList[2];
 
@@ -47,7 +47,7 @@ console.log(val);
 // scriptsArr.forEach(function(script){
 //     console.log(script.src);
 // });
-
+//     console.log(scripts);
 
 // 1.              document.getElementById();
 
@@ -83,15 +83,15 @@ console.log(val);
 
 // document.querySelector('.collection .collection-item:nth-child(3)').style.background = 'red';
 // document.querySelector('.collection .collection-item:nth-child(odd)').style.background = 'black';
-// document.querySelector('collection .collection-item:nthe-child(even)').style.backgroundColor = 'grey';
+// document.querySelector('collection .collection-item:nth-child(even)').style.backgroundColor = 'grey';
 
 // ******************************MULTIPLE ELEMENTS*********************************************
 
 // 1.              getElementsByClasName()
 
-// const collectionItems = getElementByClassName('collection-item');
+// const collectionItems = document.getElementsByClassName('collection-item');
 // console.log(collectionItems);
-// Array.from(CollectionItems).forEach(function(item , index){
+// Array.from(collectionItems).forEach(function(item , index){
 //     item.style.backgroundColor = (index % 2 ==0 ? 'grey': 'black');
 // });
 
@@ -102,22 +102,22 @@ console.log(val);
 // Array.from(lis).forEach(function(li){
 //     li.style.color = 'black';
 // });
-
+// console.log(lis);
 
 
 // 3..              querySelectorAll(): returns NodeList of all elements matching the selector 
 //                     HTMLCollections cannot be looped using forEach but NodeList can
 
-//                     const deleteItems = querySelectorAll('.collections .delete-item');
-//                     console.log(deleteItems);
-//                     deleteItems.forEach(function(item){
-//                         item.innerHTML = '<i class="fa fa-trash"></i>';
-//                     });
+                    // const deleteItems = querySelectorAll('.collections .delete-item');
+                    // console.log(deleteItems);
+                    // deleteItems.forEach(function(item){
+                    //     item.innerHTML = '<i class="fa fa-trash"></i>';
+                    // });
 
 // *********************************Traversing the DOM************************************
 
 // const list = document.querySelector('ul.collection');
-// const listItem = document.querySelector('ul.collection-item');
+// const listItem = document.querySelector('li.collection-item');
 
 // console.log(list);
 // console.log(listItem);
@@ -142,12 +142,13 @@ console.log(val);
 // ********gET CHILDREN ELEMENT***************
 
 // val = list.children;
-// val = list.childred[1];
+// val = list.children[1];
+
 
 // *********CHILDREN OF CHILDREN**************
-// val = list.children[1].childred[1].children;
+// val = list.children[1].children[1].children;
 
-// list.childred[1].children[0].innerHTML = '<i class="fa fa-trash"></i>';
+// list.children[1].children[0].innerHTML = '<i class="fa fa-trash"></i>';
 
 // ************first CHILD***************
 // val = list.firstChild;
@@ -167,15 +168,15 @@ console.log(val);
 
 // *******************get text sibling
 // val = listItem.nextSibling;
-// val = lisstItem.nextElementSibling.nextElementWSibling;
+// val = listItem.nextElementSibling.nextElementSibling;
 
 // ***************get the previois sibling
 // val = listItem.previousSibling;
-// val = listItme.previousElementSibling;
+// val = listItem.previousElementSibling;
 
 // val = list.nextElementSibling.nextElementSibling.children[0].previousElementSibling;
 
-
+// console.log(val);
 
 // *************************************** create element with JS
 //                                         document.createElement();
@@ -189,21 +190,21 @@ console.log(val);
 // LI.classList.add('collection-item');
 
 
-// LI.innnerHTML = 'List item 6  <a href="" class="delete-item secondary-content"><i class="fa fa-remove"></i></a>';
+// LI.innerHTML = 'List item 6  <a href="" class="delete-item secondary-content"><i class="fa fa-remove"></i></a>';
 
-// const link  = document.addElement('a');
+// const link  = document.createElement('a');
 // link.className = "delete-item secondary-content";
 // link.setAttribute('title', 'Remove');
 // const icon = document.createElement('i');
 // icon.className = "fa fa-trash";
 // link.appendChild(icon);
 
-// LI.appendChild(document.createElement("Task 6"));
+// LI.appendChild(document.createElement('Task-6'));   // this is an alternate yet complex way to append
 // LI.appendChild(link);
 
-// *************ADD THE DYANAMICALLY CREATED ELEMENT TO OUR DOMException
+// // *************ADD THE DYANAMICALLY CREATED ELEMENT TO OUR DOMException
 // const list = document.querySelector('.collection');
-// link.appendChild(LI);
+// list.appendChild(LI);
 
 // console.log(LI);
 
@@ -255,7 +256,8 @@ console.log(val);
 
 // console.clear();
 // const clearAllBtn = document.querySelector('.clear-tasks');
-// clearAllButton.addEventListener('click',function(evt){     // we can use evt or e or event while passing an object of event
+// clearAllBtn.addEventListener('click',function(evt){     // we can use evt or e or event while passing an object of event
+//    evt.preventDefault();
 //     console.log('clicked');
 //     console.log(event);
 //     console.log(event.target);
@@ -263,11 +265,11 @@ console.log(val);
 //     console.log(event.type);
 //     console.log(event.timeStamp);
 
-//     coordts of event relative to the window
+//     // coordts of event relative to the window
 //     console.log(event.clientX);
 //     console.log(event.clientY);
 
-//     ccordts of event relative to the element
+//     // ccordts of event relative to the element
 //     console.log(event.offsetX);
 //     console.log(event.offsetY);
 // });
@@ -294,8 +296,8 @@ console.log(val);
 
 // *******************KEY EVENTS IN JS*************************
 
-// const task = getElementById('task');
-// const form = task.parentElement.parentElement;
+const task = document.getElementById('task');
+const form = task.parentElement.parentElement;
 
 // task.addEventListener('keydown',runAnevEvent);
 // task.addEventListener('keyup',runAnevEvent);
@@ -329,6 +331,7 @@ console.log(val);
 //     console.log(task);
 //     console.log(task.value); // retrieves the value of input field
 //     e.preventDefault();
+
 // });
 
 // **********************EVENT HANDLING
@@ -360,7 +363,7 @@ console.log(val);
 
 
 // *******************Storage
-// Application storage is suppoted by javascript with an objectb of localStorage
+// Application storage is supported by javascript with an objectb of localStorage
 
 // It has 2 methods
 // 1.  setItem('key','value');
@@ -394,12 +397,12 @@ console.log(val);
 // WHY JSON STRINGIFIES???????
 // as it can be again converted to js object, this is known as parsing
 
-// localStorage.setItem('subjects', JSON.stringify(['DS', 'java', 'js']));
-// console.log(JSON.parse(localStorage.getItem('subjects')));
+localStorage.setItem('subjects', JSON.stringify(['DS', 'java', 'js']));
+console.log(JSON.parse(localStorage.getItem('subjects')));
 
 
 // ********Session storage
 
 // sessionStorage('name','param');
 
-
+// console.log(val)

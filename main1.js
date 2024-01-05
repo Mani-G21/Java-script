@@ -148,6 +148,5 @@ function handleSearch(e)
    //show filtered tasks
    filteredTasks.forEach(function(task){
     addTaskElement(task);
-
    });
 }

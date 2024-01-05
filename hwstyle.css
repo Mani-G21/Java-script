@@ -1,0 +1,22 @@
+.input-field{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-wrapper .input-field #filterTasks{
+  flex-shrink: 4;
+}
+
+.collection-item{
+  padding: 50%;
+  font-size: larger;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
