@@ -168,9 +168,6 @@ function attachElement(text,tdate,tprio){
     icon.classList.add('btn');
     icon.classList.add('black');
 
-    link.appendChild(icon);
-    list.appendChild(link);
-
     if(tprio==1){
         const taprio = document.createTextNode('LOW');
        
@@ -188,6 +185,11 @@ function attachElement(text,tdate,tprio){
         list.appendChild(taprio);
         list.style.backgroundColor = 'red';
     }
+
+    link.appendChild(icon);
+    list.appendChild(link);
+
+  
 }
 
 
