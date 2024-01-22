@@ -1,28 +1,42 @@
 
 html{
     height: 100%;
-    background: radial-gradient(circle, #FFF, #CCC);
+    background: url(_1acc754c-6e91-41f8-a48a-38a31bf253b3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 45%;
+    font-family: 'Comic Neue', cursive;
+
+    
   }
   .text-center{
     text-align: center;
   }
-  
+  .back{
+    background: black;
+    color: white;
+    box-shadow: 1px 2px 2px 4px gray;
+    padding: 9px;
+    border-radius: 5px;
+  }
   #container{
     box-sizing: border-box;
-    height: 440px;
-    width: 590px;
-    background: #9DD2EA;
+    height: auto;
+    width: 42vw;
+    background-color: rgba(255, 242, 227, 0.882);
+    border: 20px  black;
+    border-style: dashed double none;
+    box-shadow: 1px 1px 10px 20px rgba(0, 0, 0, 0.666);
     padding: 20px;
     border-radius: 10px;
     margin: 100px auto;
-    box-shadow: 0 4px 0 0 #009DE4;
     position: relative;
   }
   
   #score{
-    background: #F1FF92;
-    color: #888E5F;
-    box-shadow: 0 4px #9DA853;
+    background: black;
+    color: white;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.666);
     padding: 9px;
     position: absolute;
     left: 500px;
@@ -45,22 +59,26 @@ html{
     width: 450px;
     height: 150px;
     margin: 50px auto 10px;
-    box-shadow: 0 4px #535AA8;
+    box-shadow: 1px 5px 5px 5px black;
     border-radius: 7px;
     line-height: 150px;
     font-family: cursive, sans-serif;
     font-size: 100px;
-    background: #9DA0EA;
+    background: #0b7a99;
   }
   
   #information{
     width: 450px;
     height: 50px;
     margin: 10px auto;
-    background: #B481D9;
+    background: #000000;
     border-radius: 7px;
     line-height: 50px;
-    box-shadow: 0 4px #8153A8;
+    color: blanchedalmond;
+    font-size: x-large;
+    font-family: 'Comic Neue', cursive;
+
+   
   }
   
   #choices{
@@ -71,7 +89,7 @@ html{
   .box{
     width: 85px;
     height: 85px;
-    background: #FFF;
+    background: #054c5ea4;
     float: left;
     margin-right: 36px;
     border-radius: 5px;
@@ -88,7 +106,7 @@ html{
   
   #startstop:active,
   .box:active{
-    background: #9C89F6;
+    background: #137085;
     top: 4px;
     box-shadow: 0 0;
     color: #FFF;
@@ -96,11 +114,11 @@ html{
   
   #startstop {
     width: 100px;
+    background:rgb(168, 156, 137);
     height: 38px;
-    background: rgba(255, 255, 255, 0.5);
     margin: 0px auto;
     line-height: 38px;
-    box-shadow: 0 4px rgba(0, 0, 0 , 0.2);
+    box-shadow: 0 4px rgba(4, 37, 60, 0.2);
     cursor: pointer;
     position: relative;
     transition: all .2s;
@@ -114,7 +132,7 @@ html{
     bottom: 5px;
     right: 20px;
     
-    background: #AFE64B;
+    background:rgb(168, 156, 137);
     border-radius: 5px;
     box-shadow: 0 4px rgba(0, 0, 0, 0.2);
     
@@ -124,8 +142,12 @@ html{
   #gameover{
     width: 500px;
     height: 200px;
-    background: linear-gradient(#F3C76B, #F3746C);
-    color: #FFF;
+    font-weight: bolder;
+    border: 10px;
+    border-style: dashed double;
+    
+    background: #0b7a99;
+    color: black;
     font-size: 2.5rem;
     text-transform: uppercase;
     position: absolute;

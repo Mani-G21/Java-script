@@ -1,0 +1,20 @@
+[
+    {
+      "name": "Smit Rambhia",
+      "age": 19,
+      "address": "Vashi",
+      "college": "TSEC"
+    },
+    {
+      "name": "Jatin Hinduja",
+      "age": 19,
+      "address": "Kalyan",
+      "college": "TSEC"
+    },
+    {
+      "name": "Mehul",
+      "age": 19,
+      "address": "Ulhas",
+      "college": "TSEC"
+    }
+  ]

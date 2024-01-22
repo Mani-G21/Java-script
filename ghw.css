@@ -1,0 +1,66 @@
+body{
+    font-family: 'Comic Neue', cursive;
+    background: url(_1acc754c-6e91-41f8-a48a-38a31bf253b3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 40%;
+   
+}
+.i-container{
+    border: 20px  black;
+    border-style: dashed double none;
+    box-shadow: 1px 1px 10px 20px rgba(0, 0, 0, 0.666);
+    display: flex;
+    width: 50vh;
+    margin: auto;
+    flex-direction: column;
+    padding: 2%;
+    margin-top: 20vh;
+    background-color: rgba(255, 228, 196, 0.807);
+    font-size: x-large;
+    font-weight: bolder;
+    text-shadow: 1px 2px gray;
+}
+.i-container .writer{
+    color: gray;
+    font-size: large;
+    text-shadow: none;
+}
+option{
+    font-family: 'Comic Neue', cursive;
+}
+.i-container select{
+    background-color: rgba(39, 118, 145, 0.993);
+   box-shadow: 0px 1px 5px 5px black;
+    padding: 5px;
+    border: 2px;
+    font-size: medium;
+}
+.i-container span{
+    font-size: xx-large;
+}
+
+.i-container .quote{
+    color: rgb(41, 104, 147);
+}
+.i-container #diff-selector{
+    margin: auto;
+    zoom: 150%;
+}
+
+.i-container button{
+   font-size: x-large;
+    font-weight: bolder;
+    background-color: rgba(39, 118, 145, 0.993);
+    box-shadow: 0px 1px 5px 5px black;
+    width: 50%;
+    align-self: center;
+    padding: 1.8%;
+    font-family: 'Comic Neue', cursive;
+}
+
+.ready-select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

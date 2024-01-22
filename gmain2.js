@@ -1,6 +1,8 @@
 const startStopBtn = document.getElementById('startstop');
+
+
 let playing = false;
-const GAME = 15;
+const GAME = 100;
 let game_time;
 let score;
 let correctAns;
@@ -81,24 +83,29 @@ function generateQA(){
     let num1 = generateRandomNumber();
     let num2 = generateRandomNumber();
     let num3 = generateRandomNumber();
+    let num4 = generateRandomNumber();
     let opts = ['+', '-', '*', '/'];
 
     let operator1 = generateRandomNumber(0, 3);
-    let operator2;
+    let operator2,operator3;
     do {
          operator2 = generateRandomNumber(0, 3);
     } while (operator1 === operator2);
 
-    let hAns;
+    do {
+        operator3 = generateRandomNumber(0, 3);
+   } while (operator3 === operator2 || operator3 === operator1);
+    let shAns,hAns;
 
-    hAns = eval(`${num1} ${opts[operator1]} ${num2}`);
-    correctAns = eval(`${hAns} ${opts[operator2]} ${num3}`);
+    shAns = eval(`${num1} ${opts[operator1]} ${num2}`);
+    hAns = eval(`${shAns} ${opts[operator2]} ${num3}`);
+    correctAns = eval(`${hAns} ${opts[operator2]} ${num4}`);
 
     if(correctAns == NaN){
         generateQA();
     }
 
-    setInnerHTML('#question',`${num1} ${opts[operator1]} ${num2} ${opts[operator2]} ${num3}`);
+    setInnerHTML('#question',`${num1} ${opts[operator1]} ${num2} ${opts[operator2]} ${num3} ${opts[operator3]} ${num4}`);
 
      const correctAnsBox = generateRandomNumber(1,4);
      setInnerHTML(`#box${correctAnsBox}`,correctAns);
@@ -109,14 +116,20 @@ function generateQA(){
 
     for(i=1;i<=4;i++){
          if(i == correctAnsBox) continue;
+
+
          let wrongNum1;
          let wrongNum2;
          let wrongAns;
+
+
         do{
             wrongNum1 = generateRandomNumber();
             wrongNum2 = generateRandomNumber();
             wrongAns= wrongNum1 * wrongNum2
         }while(answer.indexOf(wrongAns)!= -1);
+
+
         setInnerHTML(`#box${i}`,wrongAns);
     }
 }
