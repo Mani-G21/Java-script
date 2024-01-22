@@ -27,6 +27,7 @@ function fetchUsers(evt){
         if(this.state == 200){
             const output = JSON.parse(this.responseText);
             const results = output.results;
+            console.log(output);
             let dom = '';
             console.log(results);
             results.forEach(function(user){

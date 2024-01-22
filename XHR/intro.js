@@ -11,6 +11,7 @@ function getTextData(evt){
 
     //3. send the opened request using send()
     xhr.send();
+    console.log(typeof(xhr));
     console.log(xhr);
     xhr.onload = function(){
         if(this.status === 200){
