@@ -11,7 +11,7 @@ function createPost(post){
                 reject({status: 401, statusText: 'Unauthorized'});
             }
             posts.push(post);
-            resolve();
+            resolve('hey');
         },2000);
     });
 }

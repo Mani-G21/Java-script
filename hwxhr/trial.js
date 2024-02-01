@@ -66,13 +66,19 @@ cardReveal.appendChild(cardTitle2);
 var cardDescription = document.createElement("p");
 cardDescription.innerHTML = `
 <ul class = "list-group-mb-4">
-<li class = "list-group-item"><b>Email:</b> ${user.email}</li>
+<li class = "list-group-item"><span class="material-icons">
+email
+</span> ${user.email}</li>
 <br>
 <li class = "list-group-item"><b>Age:</b>    ${user.dob.age}</li>
 <br>
-<li class = "list-group-item"><b>Contact:</b>    ${user.cell}</li>
+<li class = "list-group-item"><span class="material-icons">
+call
+</span>    ${user.cell}</li>
 <br>
-<li class = "list-group-item"><b>Address:</b>   ${user.location.city} ${user.location.timezone.description}</li>
+<li class = "list-group-item"><span class="material-icons">
+home
+</span>   ${user.location.city} ${user.location.timezone.description}</li>
 
 </ul>
 `;

@@ -5,6 +5,7 @@ document.getElementById('btnArrayOfJsonData').addEventListener('click', getArray
 function getTextData(){
     fetch('data.txt')
         .then(function(res){
+            // console.log(res);
             if(res.status === 200){
                 return res.text();
             }

@@ -34,3 +34,14 @@ body{
     font-size: xx-large;
 } 
 
+.list-group-item, .list-group-mb-4{
+    display: flex;
+    border: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 7px;
+}
+
+
